@@ -3,7 +3,7 @@ $comment
 		vcd file KronosX.msim.vcd -direction
 $end
 $date
-	Sat May 17 16:47:40 2014
+	Mon May 19 00:05:24 2014
 $end
 $version
 	ModelSim Version 10.1d
@@ -11,85 +11,94 @@ $end
 $timescale
 	1ps
 $end
-$scope module ALU_vlg_vec_tst $end
-$var reg 4 ! A [3:0] $end
-$var reg 4 " B [3:0] $end
-$var wire 1 # Z [3] $end
-$var wire 1 $ Z [2] $end
-$var wire 1 % Z [1] $end
-$var wire 1 & Z [0] $end
-$var wire 1 ' sampler $end
+$scope module Shift_vlg_vec_tst $end
+$var reg 2 ! A [1:0] $end
+$var wire 1 " Z [3] $end
+$var wire 1 # Z [2] $end
+$var wire 1 $ Z [1] $end
+$var wire 1 % Z [0] $end
+$var wire 1 & sampler $end
 $scope module i1 $end
-$var wire 1 ( gnd $end
-$var wire 1 ) vcc $end
-$var wire 1 * unknown $end
-$var tri1 1 + devclrn $end
-$var tri1 1 , devpor $end
-$var tri1 1 - devoe $end
-$var wire 1 . inst7~0_combout $end
-$var wire 1 / inst15~0_combout $end
-$var wire 1 0 inst15~combout $end
-$var wire 1 1 inst10~0_combout $end
-$var wire 1 2 inst6~0_combout $end
-$var wire 1 3 inst~combout $end
-$var wire 1 4 B~combout [3] $end
-$var wire 1 5 B~combout [2] $end
-$var wire 1 6 B~combout [1] $end
-$var wire 1 7 B~combout [0] $end
-$var wire 1 8 A~combout [3] $end
-$var wire 1 9 A~combout [2] $end
-$var wire 1 : A~combout [1] $end
-$var wire 1 ; A~combout [0] $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - A~combout [1] $end
+$var wire 1 . A~combout [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b1 !
-b111 "
-x&
-x%
-x$
+b0 !
+0%
+0$
 x#
-x'
-0(
-1)
-x*
+x"
+x&
+0'
+1(
+x)
+1*
 1+
 1,
-1-
-x.
-x/
-x0
-x1
-x2
-x3
-17
-16
-15
-04
-1;
-0:
-09
-08
+0.
+0-
 $end
-#5642
-03
-02
-#5644
-1.
-#6043
-01
-#6313
-1/
-#6704
-10
-#9353
-0%
-#9518
+#3823
+0#
+#3880
+0"
+#60000
+b1 !
 0&
-#9599
-0$
-#11350
+#60979
+1.
+#64802
 1#
+#140000
+b0 !
+1&
+#140979
+0.
+#144802
+0#
+#170000
+b10 !
+0&
+#170979
+1-
+#174859
+1"
+#240000
+b0 !
+1&
+#240979
+0-
+#244859
+0"
+#270000
+b1 !
+b11 !
+0&
+#270979
+1.
+1-
+#274802
+1#
+#274859
+1"
+#440000
+b10 !
+b0 !
+1&
+#440979
+0.
+0-
+#444802
+0#
+#444859
+0"
 #1000000

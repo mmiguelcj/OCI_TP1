@@ -1,0 +1,41 @@
+|__|__|__|__|
+00 aritmética
+01 desvio incondicional
+10 desvio condicional
+11 operação com memória
+--------------------------------------
+00 aritmética
+|00|RA|RB|OP|
+
+OPCODE
+00 adição 		-> RB = RA + RB
+01 subtração 		-> RB = RA + (-RB)
+10 adição constante	-> RB = RA + *(RBOP)
+11 negação		-> Negação
+**************************************** 
+01 desvio incondicional
+|01|RA|XX|XX|
+PC = RA + XXXX
+
+**********************************
+10 desvio condicional
+|10|RA|RB|XX|
+if(RA == RB) PC = PC + XX
+else PC = PC + 1
+***********************************
+11 operação com memória
+|11|RA|RB|OP|
+
+00 leitura da memória de dados
+01 escrita na memória de dados
+10 Nenhuma operação(NOP)
+11 Nenhuma operação(NOP)
+
+Branch Permite a realização do desvio condicional. 1
+MemoryToRegister Identifica o valor a ser escrito no registrador. 1
+MemoryRead Permite a leitura da memória de dados. 1
+MemoryWrite Permite a escrita na memória de dados. 1
+RegisterWrite Permite a escrita no banco de registradores. 1
+ALUOperation Identifica qual operação a ALU deve fazer. 2
+Jump Permite a realização do desvio incondicional. 1
+ALUSource Identifica qual valor será o operando B da ALU. 1
